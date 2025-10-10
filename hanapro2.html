@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>花プロジェクト | ボランティア公式サイト</title>
+  <style>
+    :root {
+      --bg: #faf7f8;
+      --panel: #ffffff;
+      --text: #2a2a2a;
+      --muted: #6b7280;
+      --brand: #e86a92;
+      --brand-dark: #cc567c;
+      --accent: #8bc34a;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --max: 1100px;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: "Noto Sans JP", sans-serif; color:var(--text); background:var(--bg); line-height:1.7; scroll-behavior: smooth; }
+    a { color: var(--brand-dark); text-decoration: none; }
+    img { max-width: 100%; border-radius: var(--radius); }
+
+    /* ヘッダー */
+    header {
+      position: sticky; top: 0;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #f0e7ea;
+      z-index: 100;
+    }
+    .nav {
+      max-width: var(--max); margin: 0 auto; padding: 12px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.1rem; }
+    .brand .logo { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg,var(--brand),var(--accent)); }
+
+    nav ul { list-style: none; display: flex; gap: 14px; margin: 0; padding: 0; }
+    nav a { padding: 8px 12px; border-radius: 8px; }
+    nav a:hover { background: #ffe5ee; }
+
+    /* ハンバーガーメニュー */
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .menu-toggle div { width: 25px; height: 3px; background: var(--brand-dark); border-radius: 2px; }
+    @media (max-width: 768px) {
+      nav ul { 
+        display: none; flex-direction: column; width: 100%; background: #fff;
+        border-top: 1px solid #f0e7ea; padding: 10px 0;
+      }
+      nav ul.open { display: flex; }
+      .menu-toggle { display: flex; }
+    }
+
+    /* セクション共通 */
+    section { padding: 64px 20px; }
+    .wrap { max-width: var(--max); margin: 0 auto; }
+    .section-head { text-align: center; margin-bottom: 28px; }
+    .section-head h2 { font-size: 1.6rem; margin: 0 0 8px; }
+    .section-head p { color: var(--muted); margin: 0; }
+
+    /* カード・ボタンなど */
+    .card { background: var(--panel); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+    .btn { display: inline-block; padding: 12px 18px; border-radius: 999px; font-weight: 600; box-shadow: var(--shadow); border: none; cursor: pointer; text-align: center; }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-primary:hover { background: var(--brand-dark); }
+    .btn-ghost { background: #fff; color: var(--brand-dark); border: 1px solid #ffd3e0; }
+
+    /* 吹き出し */
+    .balloon-list { display: grid; gap: 20px; }
+    .balloon { display: flex; align-items: flex-start; gap: 12px; }
+    .balloon .icon { width: 48px; height: 48px; border-radius: 50%; background: var(--brand); flex-shrink: 0; }
+    .balloon .content { background: #fff; padding: 14px 16px; border-radius: 16px; box-shadow: var(--shadow); max-width: 80%; }
+    .balloon .meta { font-size: 0.9rem; color: var(--muted); margin-bottom: 6px; }
+
+    /* Q&A */
+    details { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; }
+    summary { cursor: pointer; font-weight: 600; }
+    summary::marker { content: "❓ "; }
+    details[open] { border: 1px solid #ffd3e0; }
+    details p { margin-top: 8px; }
+
+    /* 動画埋め込み */
+    .video-container {
+      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+      border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .video-container iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      border: none; border-radius: var(--radius);
+    }
+
+    /* フッター */
+    footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; margin-top: 40px; }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+
+    /* レスポンシブ */
+    @media(max-width:768px){
+      .balloon .content { max-width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand"><div class="logo"></div><div>花プロジェクト</div></div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+      <nav>
+        <ul id="menu">
+          <li><a href="#about">活動内容</a></li>
+          <li><a href="#intro-video">紹介動画</a></li>
+          <li><a href="#voices-students">学生の声</a></li>
+          <li><a href="#voices-users">利用者の声</a></li>
+          <li><a href="#flowers">お花の紹介</a></li>
+          <li><a href="#qa">よくある質問</a></li>
+          <li><a href="#booking" class="btn btn-primary">予約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 活動内容 -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>花プロジェクトとは</h2>
+        <p>花を通して笑顔を届ける学生ボランティア活動です。</p>
+      </div>
+  <!-- スライドショー部分 -->
+  <div>
+    <img id="slideshow" 
+         src="file:///C:/Users/kunku/OneDrive/花プロ/S__25403487.jpg" 
+         alt="花と笑顔">
+  </div>
+</section>
+
+<script>
+  // 画像リスト
+const images = [
+  "images/S__25403487.jpg",
+  "images/S__25403488.jpg",
+  "images/S__25403497.jpg"
+];
+  let current = 0;
+  const slideshow = document.getElementById("slideshow");
+
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    slideshow.src = images[current];
+  }, 3000); // 3秒ごとに切り替え
+</script>
+
+        <p>『花プロジェクト』は、学生が高齢者施設や地域イベントなどを訪問し、季節の花を届けるボランティア活動です。花を通じた交流によって、笑顔を広げ、地域とのつながりを深めています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 紹介動画 -->
+  <section id="intro-video">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>紹介動画</h2>
+        <p>花プロジェクトの様子を動画でご覧ください。</p>
+      </div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="紹介動画"></iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 学生の声 -->
+  <section id="voices-students">
+    <div class="wrap">
+      <div class="section-head"><h2>学生の声</h2></div>
+      <div class="balloon-list">
+        <div class="balloon"><div class="icon"></div><div class="content"><div class="meta">大学3年・Aさん</div><p>花の色をきっかけに会話が広がり、緊張がほぐれました。</p></div></div>
+        <div class="balloon"><div class="icon"></div><div class="content"><div class="meta">大学2年・Bさん</div><p>高齢者の昔話を聞いて、世代を超えた学びを実感しました。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 利用者の声 -->
+  <section id="voices-users">
+    <div class="wrap">
+      <div class="section-head"><h2>利用者の声</h2></div>
+      <div class="balloon-list">
+        <div class="balloon"><div class="icon"></div><div class="content"><div class="meta">80代・女性</div><p>部屋が明るくなり、学生さんとの会話が毎日の楽しみです。</p></div></div>
+        <div class="balloon"><div class="icon"></div><div class="content"><div class="meta">施設職員</div><p>安全面の配慮も丁寧で、レクリエーションとしても最適でした。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お花の紹介 -->
+  <section id="flowers">
+    <div class="wrap">
+      <div class="section-head"><h2>お花の紹介</h2><p>今回は「ビオラ」をお届けします。</p></div>
+      <div class="card" style="text-align:center;">
+        <images/large_d12ffb5e-9b9e-4276-be0d-a6f54f90a702.jpg" alt="ビオラ">
+        <h3>ビオラ</h3>
+        <p class="meta">花言葉：誠実・信頼</p>
+        <p>小さく可憐な花で、色とりどりの表情が魅力です。春や秋に元気を届けます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- よくある質問 -->
+  <section id="qa">
+    <div class="wrap">
+      <div class="section-head"><h2>よくある質問</h2></div>
+      <div class="grid" style="gap:16px;">
+        <details><summary>予約はどのくらい前に必要ですか？</summary><p>基本的には1週間前までにお願いします。急ぎの場合はご相談ください。</p></details>
+        <details><summary>費用はかかりますか？</summary><p>お花代・交通費など実費をご負担いただきます。詳細は予約時にご案内します。</p></details>
+        <details><summary>写真撮影は可能ですか？</summary><p>同意をいただいた場合のみ撮影し、活動報告に使用します。</p></details>
+      </div>
+    </div>
+  </section>
+
+<section id="news">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>最新情報</h2>
+        <p>最新情報はこちらから</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <a href="https://line.me/R/ti/p/xxxxxxxx" target="_blank" class="btn btn-primary">LINE</a>
+        <a href="https://www.instagram.com/hana_pro2024" target="_blank" class="btn btn-ghost">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 予約・お問い合わせ -->
+  <section id="booking">
+    <div class="wrap">
+      <div class="section-head"><h2>予約・お問い合わせ</h2></div>
+      <div class="card">
+        <form action="https://docs.google.com/forms/d/e/XXXXXX/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+          <label>お名前*<input type="text" name="entry.111111" required></label><br>
+          <label>メール*<input type="email" name="entry.222222" required></label><br>
+          <label>希望日*<input type="date" name="entry.333333" required></label><br>
+          <label>人数*<input type="number" min="1" name="entry.444444" required></label><br>
+          <label>ご要望<textarea name="entry.555555"></textarea></label><br>
+          <button class="btn btn-primary" type="submit">送信する</button>
+        </form>
+        <iframe name="hidden_iframe" style="display:none;" onload="if(submitted) document.getElementById('form-status').innerText='送信ありがとうございました！';"></iframe>
+        <p id="form-status" class="meta"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div><strong>花プロジェクト</strong><br>メール: <a href="mailto:contact@example.com">contact@example.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    let submitted = false;
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
