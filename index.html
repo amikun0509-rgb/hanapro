@@ -1,0 +1,179 @@
+<<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>花プロジェクト | ボランティア公式サイト</title>
+
+  <!-- CSS読み込み -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>花プロジェクト</div>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+      <nav>
+        <ul id="menu">
+          <li><a href="#about">活動内容</a></li>
+          <li><a href="#intro-video">紹介動画</a></li>
+          <li><a href="#voices-students">学生の声</a></li>
+          <li><a href="#voices-users">利用者の声</a></li>
+          <li><a href="#flowers">お花の紹介</a></li>
+          <li><a href="#qa">よくある質問</a></li>
+          <li><a href="#booking" class="btn btn-primary">予約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 活動内容 -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>花プロジェクトとは</h2>
+        <p>花を通して笑顔を届ける学生ボランティア活動です。</p>
+      </div>
+      <div>
+        <img id="slideshow" src="images/S__25403487.jpg" alt="花と笑顔">
+      </div>
+      <p>『花プロジェクト』は、学生が高齢者施設や地域イベントなどを訪問し、季節の花を届けるボランティア活動です。花を通じた交流によって、笑顔を広げ、地域とのつながりを深めています。</p>
+    </div>
+  </section>
+
+  <!-- 紹介動画 -->
+  <section id="intro-video">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>紹介動画</h2>
+        <p>花プロジェクトの様子を動画でご覧ください。</p>
+      </div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="紹介動画"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 学生の声 -->
+  <section id="voices-students">
+    <div class="wrap">
+      <div class="section-head"><h2>学生の声</h2></div>
+      <div class="balloon-list">
+        <div class="balloon">
+          <div class="icon"></div>
+          <div class="content">
+            <div class="meta">大学3年・Aさん</div>
+            <p>花の色をきっかけに会話が広がり、緊張がほぐれました。</p>
+          </div>
+        </div>
+        <div class="balloon">
+          <div class="icon"></div>
+          <div class="content">
+            <div class="meta">大学2年・Bさん</div>
+            <p>高齢者の昔話を聞いて、世代を超えた学びを実感しました。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 利用者の声 -->
+  <section id="voices-users">
+    <div class="wrap">
+      <div class="section-head"><h2>利用者の声</h2></div>
+      <div class="balloon-list">
+        <div class="balloon">
+          <div class="icon"></div>
+          <div class="content">
+            <div class="meta">80代・女性</div>
+            <p>部屋が明るくなり、学生さんとの会話が毎日の楽しみです。</p>
+          </div>
+        </div>
+        <div class="balloon">
+          <div class="icon"></div>
+          <div class="content">
+            <div class="meta">施設職員</div>
+            <p>安全面の配慮も丁寧で、レクリエーションとしても最適でした。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お花の紹介 -->
+  <section id="flowers">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>お花の紹介</h2>
+        <p>今回は「ビオラ」をお届けします。</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <img src="images/large_d12ffb5e-9b9e-4276-be0d-a6f54f90a702.jpg" alt="ビオラ">
+        <h3>ビオラ</h3>
+        <p class="meta">花言葉：誠実・信頼</p>
+        <p>小さく可憐な花で、色とりどりの表情が魅力です。春や秋に元気を届けます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- よくある質問 -->
+  <section id="qa">
+    <div class="wrap">
+      <div class="section-head"><h2>よくある質問</h2></div>
+      <div class="grid" style="gap:16px;">
+        <details><summary>予約はどのくらい前に必要ですか？</summary><p>基本的には1週間前までにお願いします。急ぎの場合はご相談ください。</p></details>
+        <details><summary>費用はかかりますか？</summary><p>お花代・交通費など実費をご負担いただきます。詳細は予約時にご案内します。</p></details>
+        <details><summary>写真撮影は可能ですか？</summary><p>同意をいただいた場合のみ撮影し、活動報告に使用します。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新情報 -->
+  <section id="news">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>最新情報</h2>
+        <p>最新情報はこちらから</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <a href="https://line.me/R/ti/p/xxxxxxxx" target="_blank" class="btn btn-primary">LINE</a>
+        <a href="https://www.instagram.com/hana_pro2024" target="_blank" class="btn btn-ghost">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 予約・お問い合わせ -->
+  <section id="booking">
+    <div class="wrap">
+      <div class="section-head"><h2>予約・お問い合わせ</h2></div>
+      <div class="card">
+        <form action="https://docs.google.com/forms/d/e/XXXXXX/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+          <label>お名前*<input type="text" name="entry.111111" required></label><br>
+          <label>メール*<input type="email" name="entry.222222" required></label><br>
+          <label>希望日*<input type="date" name="entry.333333" required></label><br>
+          <label>人数*<input type="number" min="1" name="entry.444444" required></label><br>
+          <label>ご要望<textarea name="entry.555555"></textarea></label><br>
+          <button class="btn btn-primary" type="submit">送信する</button>
+        </form>
+        <iframe name="hidden_iframe" style="display:none;" onload="if(submitted) document.getElementById('form-status').innerText='送信ありがとうございました！';"></iframe>
+        <p id="form-status" class="meta"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div><strong>花プロジェクト</strong><br>メール: <a href="mailto:contact@example.com">contact@example.com</a></div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
