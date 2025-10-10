@@ -97,19 +97,7 @@ details[open] { border: 1px solid #ffd3e0; }
 details p { margin-top: 8px; }
 
 /* 動画埋め込み */
-.video-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
 
-.video-container iframe {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border: none;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
 
 
 /* フッター */
@@ -143,6 +131,20 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 
 .note-button:hover {
   background-color: #d76c6b;
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 
