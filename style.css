@@ -147,5 +147,32 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
   box-shadow: var(--shadow);
 }
 
+/* ▼ スマホ表示でのメニュー位置調整 ▼ */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px; /* ヘッダーの高さに合わせて調整 */
+    right: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #f0e7ea;
+    box-shadow: var(--shadow);
+    z-index: 99;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+
+
 
 
