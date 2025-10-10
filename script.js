@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const images = [
     "src=https://github.com/amikun0509-rgb/hanapro/blob/main/S__25403487.jpg?raw=true",
     "src=https://github.com/amikun0509-rgb/hanapro/blob/main/S__25403488.jpg?raw=true",
-    "images/S__25403497.jpg"
+    "src=https://github.com/amikun0509-rgb/hanapro/blob/main/S__25403497.jpg?raw=true"
   ];
 
   let current = 0;
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   }
 });
+
 
 
 
