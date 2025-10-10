@@ -118,3 +118,25 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 @media(max-width:768px){
   .balloon .content { max-width: 100%; }
 }
+
+.report-section {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.note-button {
+  display: inline-block;
+  background-color: #f0908d;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.note-button:hover {
+  background-color: #d76c6b;
+}
+
+
