@@ -1,8 +1,10 @@
 let submitted = false;
 
 function toggleMenu() {
-  document.getElementById("menu").classList.toggle("open");
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
 }
+
 
 // スライドショー
 const images = [
@@ -17,3 +19,4 @@ setInterval(() => {
   current = (current + 1) % images.length;
   slideshow.src = images[current];
 }, 3000); // 3秒ごとに切り替え
+
