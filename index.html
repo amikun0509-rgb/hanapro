@@ -1,11 +1,9 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>花プロジェクト | ボランティア公式サイト</title>
-
-  <!-- CSS読み込み -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -16,9 +14,11 @@
         <div class="logo"></div>
         <div>花プロジェクト</div>
       </div>
+
       <div class="menu-toggle" onclick="toggleMenu()">
         <div></div><div></div><div></div>
       </div>
+
       <nav>
         <ul id="menu">
           <li><a href="#about">花プロジェクトとは</a></li>
@@ -27,7 +27,7 @@
           <li><a href="#voices-users">利用者の声</a></li>
           <li><a href="#flowers">お花の紹介</a></li>
           <li><a href="#qa">よくある質問</a></li>
-          <li><a href="#qa">最新情報</a></li>
+          <li><a href="#news">最新情報</a></li>
           <li><a href="#booking" class="btn btn-primary">予約</a></li>
         </ul>
       </nav>
@@ -49,29 +49,25 @@
   </section>
 
   <!-- 紹介動画 -->
-<section id="intro-video">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>紹介動画</h2>
-      <p>花プロジェクトの様子を動画でご覧ください。</p>
+  <section id="intro-video">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>紹介動画</h2>
+        <p>花プロジェクトの様子を動画でご覧ください。</p>
+      </div>
+
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/ExW8E7VZXoQ"
+          title="ボランティア参加者に向けて" allowfullscreen>
+        </iframe>
+        <iframe
+          src="https://www.youtube.com/embed/Q5RHDKJSN3Q"
+          title="利用者に向けて" allowfullscreen>
+        </iframe>
+      </div>
     </div>
-
-    <div class="video-container">
-      <iframe
-        src="https://www.youtube.com/embed/ExW8E7VZXoQ?si=xQzM3MqHTCucfmbi"
-        title="ボランティア参加者に向けて"
-        allowfullscreen>
-      </iframe>
-
-      <iframe
-        src="https://www.youtube.com/embed/Q5RHDKJSN3Q?si=rNKoDDeSCQpCVIww"
-        title="利用者に向けて"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- 学生の声 -->
   <section id="voices-students">
@@ -161,39 +157,37 @@
     </div>
   </section>
 
-  <!-- note紹介 --> 
-<section id="report" class="report-section">
-  <h2>🌼 活動報告</h2>
-  <p>私たちの活動の様子をnoteで発信しています。</p>
-  <a href="https://note.com/hanapuro_2024" target="_blank" class="note-button">
-    活動報告を見る
-  </a>
-</section>
-
-
+  <!-- note紹介 -->
+  <section id="report" class="report-section">
+    <h2>🌼 活動報告</h2>
+    <p>私たちの活動の様子をnoteで発信しています。</p>
+    <a href="https://note.com/hanapuro_2024" target="_blank" class="note-button">
+      活動報告を見る
+    </a>
+  </section>
 
   <!-- 予約・お問い合わせ -->
-<section id="register">
-  <h2>利用者様用 登録フォーム</h2>
-  <div class="form-wrapper">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe3I1TQSDWLDuTut8_An3TRXOYB7DmEDhu0vZA2y0g4LnlmYA/viewform?embedded=true"
-      width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
-  </div>
-</section>
-
+  <section id="booking">
+    <h2>利用者様用 登録フォーム</h2>
+    <div class="form-wrapper">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe3I1TQSDWLDuTut8_An3TRXOYB7DmEDhu0vZA2y0g4LnlmYA/viewform?embedded=true"
+        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
+        読み込んでいます...
+      </iframe>
+    </div>
+  </section>
 
   <footer>
     <div class="footer-inner">
-      <div><strong>花プロジェクト</strong><br>メール: <a href="mailto:contact@example.com">contact@example.com</a></div>
+      <div>
+        <strong>花プロジェクト</strong><br>
+        メール: <a href="mailto:contact@example.com">contact@example.com</a>
+      </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
 
-
-
-
-
+ 
