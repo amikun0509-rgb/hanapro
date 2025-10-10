@@ -55,7 +55,8 @@
         <p>花プロジェクトの様子を動画でご覧ください。</p>
       </div>
       <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="紹介動画"></iframe>
+        <iframe src="https://youtu.be/ExW8E7VZXoQ?si=xQzM3MqHTCucfmbi" title="ボランティア参加者に向けて"></iframe>
+        <ifreme src="https://youtu.be/Q5RHDKJSN3Q?si=rNKoDDeSCQpCVIww" title=利用者にむけて"></ifreme>
       </div>
     </div>
   </section>
@@ -148,24 +149,26 @@
     </div>
   </section>
 
+  <!-- note紹介 --> 
+<section id="report" class="report-section">
+  <h2>🌼 活動報告</h2>
+  <p>私たちの活動の様子をnoteで発信しています。</p>
+  <a href="https://note.com/hanapuro_2024" target="_blank" class="note-button">
+    活動報告を見る
+  </a>
+</section>
+
+
+
   <!-- 予約・お問い合わせ -->
-  <section id="booking">
-    <div class="wrap">
-      <div class="section-head"><h2>予約・お問い合わせ</h2></div>
-      <div class="card">
-        <form action="https://docs.google.com/forms/d/e/XXXXXX/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-          <label>お名前*<input type="text" name="entry.111111" required></label><br>
-          <label>メール*<input type="email" name="entry.222222" required></label><br>
-          <label>希望日*<input type="date" name="entry.333333" required></label><br>
-          <label>人数*<input type="number" min="1" name="entry.444444" required></label><br>
-          <label>ご要望<textarea name="entry.555555"></textarea></label><br>
-          <button class="btn btn-primary" type="submit">送信する</button>
-        </form>
-        <iframe name="hidden_iframe" style="display:none;" onload="if(submitted) document.getElementById('form-status').innerText='送信ありがとうございました！';"></iframe>
-        <p id="form-status" class="meta"></p>
-      </div>
-    </div>
-  </section>
+<section id="register">
+  <h2>利用者様用 登録フォーム</h2>
+  <div class="form-wrapper">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe3I1TQSDWLDuTut8_An3TRXOYB7DmEDhu0vZA2y0g4LnlmYA/viewform?embedded=true"
+      width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
+  </div>
+</section>
+
 
   <footer>
     <div class="footer-inner">
@@ -177,3 +180,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
