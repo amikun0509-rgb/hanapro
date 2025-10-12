@@ -158,6 +158,8 @@ summary { cursor: pointer; font-weight: 600; }
 details[open] { border: 1px solid #ffd3e0; }
 #show-all-qa { margin-top: 8px; display: block; width: fit-content; margin-left: auto; margin-right: auto; }
 
+
+
 /* 料金案のリストスタイル調整 */
 .card ul { list-style-type: '🌼 '; padding-left: 25px; margin-top: 10px; }
 .card ul li { margin-bottom: 5px; }
@@ -227,5 +229,6 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 
 /* FAQの非表示・表示切り替え用 */
 .qa-hidden { display: none; }
+
 
 
