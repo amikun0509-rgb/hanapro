@@ -13,11 +13,8 @@
 
 * { box-sizing: border-box; }
 body {
-    /* フォントを「M PLUS Rounded 1c」に変更 */
     margin:0; font-family: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif;
-    color:var(--text); 
-    /* サイト全体の背景色を淡いピンクに */
-    background:var(--bg); 
+    color:var(--text); background:var(--bg);
     line-height:1.7; scroll-behavior: smooth;
 }
 a { color: var(--brand-dark); text-decoration: none; }
@@ -39,7 +36,6 @@ header {
     display: flex; align-items: center; 
     gap: 8px; font-weight: 700; font-size: 1.1rem; 
 }
-/* ロゴ画像を拡大 */
 .brand .logo img { width: 150px; height: auto; }
 
 /* ハンバーガーメニュー */
@@ -68,7 +64,7 @@ nav a:hover { background: #ffe5ee; }
 }
 
 /* 共通 */
-section { padding: 64px 20px; background: var(--bg); }
+section { padding: 64px 20px; }
 .wrap { max-width: var(--max); margin: 0 auto; }
 .section-head { text-align: center; margin-bottom: 28px; }
 .section-head h2 { 
@@ -78,8 +74,10 @@ section { padding: 64px 20px; background: var(--bg); }
 .section-head p { color: var(--muted); margin: 0; }
 
 .card {
-    background: var(--panel); border-radius: var(--radius);
-    padding: 18px; box-shadow: var(--shadow);
+    background: var(--panel); 
+    border-radius: var(--radius);
+    padding: 18px; 
+    box-shadow: var(--shadow);
 }
 .btn {
     display: inline-block; padding: 12px 18px; border-radius: 999px;
@@ -90,50 +88,29 @@ section { padding: 64px 20px; background: var(--bg); }
 .btn-primary:hover { background: var(--brand-dark); }
 .btn-ghost { background: #fff; color: var(--brand-dark); border: 1px solid #ffd3e0; }
 
-
-/* ======================================================= */
-/* 💖 LINE風（ピンク系・中央揃え）の吹き出しセクションのスタイル */
-/* ======================================================= */
-
-/* 💖 みんなの声セクション（背景を他と調和させる） */
-/* 💖 みんなの声セクション 統一デザイン */
-#voices { 
-    background: #fff5f8; /* 淡いピンクで全体統一 */
-    padding: 60px 20px;
+/* 吹き出し (みんなの声) */
+.balloon-list { 
+    display: grid; 
+    gap: 20px; 
+    margin-top: 12px; 
+    /* 吹き出しを横に並べるための重要な設定 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
 }
-
-/* 吹き出し全体 左寄せで統一 */
-.voice-group .balloon {
-    justify-content: flex-start !important;
+.balloon .content {
+    background: #fff; 
+    padding: 14px 16px; 
+    border-radius: 16px;
+    box-shadow: var(--shadow);
 }
+.balloon .meta { font-size: 0.9rem; color: var(--muted); margin-bottom: 6px; }
 
-/* 吹き出しデザイン 白ベースで統一 */
-.voice-group .balloon .content {
-    background: #ffffff;
-    border-radius: 18px;
-    border-bottom-left-radius: 2px;
-    margin-left: 5px;
-    color: var(--text);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+/* みんなの声アイコン */
+.voice-category { display: flex; align-items: center; gap: 8px; margin-top: 24px; }
+.icon.pink {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, #f8a5c2, #e86a92);
 }
-
-/* メタ情報位置も左寄せ */
-.voice-group .balloon .meta {
-    left: 10px;
-    right: auto;
-}
-
-/* カテゴリーラベルの色を全体と調和させる */
-.voice-category .label {
-    background: #ffd9e6;
-    color: var(--brand-dark);
-    border-radius: 12px;
-    padding: 4px 12px;
-}
-
-/* ======================================================= */
-/* 📝 その他のセクションのスタイル (変更なし) */
-/* ======================================================= */
+.label { font-weight: bold; color: var(--brand-dark); }
 
 /* 活動報告 */
 .report-section { text-align: center; margin: 60px 0; }
@@ -158,12 +135,11 @@ summary { cursor: pointer; font-weight: 600; }
 details[open] { border: 1px solid #ffd3e0; }
 #show-all-qa { margin-top: 8px; display: block; width: fit-content; margin-left: auto; margin-right: auto; }
 
-
-
 /* 料金案のリストスタイル調整 */
 .card ul { list-style-type: '🌼 '; padding-left: 25px; margin-top: 10px; }
 .card ul li { margin-bottom: 5px; }
 .card h3 { margin-top: 0; border-bottom: 2px solid #ffe5ee; padding-bottom: 5px;}
+.card p.meta { color: var(--brand-dark); font-weight: 600; margin-top: 5px; } 
 
 /* 紹介動画コンテナを中央寄せにする */
 .video-container {
@@ -187,11 +163,11 @@ details[open] { border: 1px solid #ffd3e0; }
 
 /* 登録フォームセクションとその中の要素を中央寄せ */
 #booking {
-    text-align: center; /* h2要素を中央寄せにする */
+    text-align: center; 
 }
 .form-buttons {
     display: flex; 
-    justify-content: center; /* ボタンの並びを中央に */
+    justify-content: center; 
     gap: 20px;
     margin-top: 20px; 
     flex-wrap: wrap;
@@ -229,6 +205,3 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 
 /* FAQの非表示・表示切り替え用 */
 .qa-hidden { display: none; }
-
-
-
