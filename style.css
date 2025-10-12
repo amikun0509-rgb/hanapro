@@ -16,8 +16,8 @@ body {
     /* フォントを「M PLUS Rounded 1c」に変更 */
     margin:0; font-family: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif;
     color:var(--text); 
-    /* LINE風に背景を薄い緑に */
-    background: #e9e9eb; 
+    /* サイト全体の背景色を淡いピンクに */
+    background:var(--bg); 
     line-height:1.7; scroll-behavior: smooth;
 }
 a { color: var(--brand-dark); text-decoration: none; }
@@ -92,11 +92,11 @@ section { padding: 64px 20px; background: var(--bg); }
 
 
 /* ======================================================= */
-/* 💖 LINE風デザインのための吹き出しセクションのスタイル */
+/* 💖 LINE風（ピンク系・中央揃え）の吹き出しセクションのスタイル */
 /* ======================================================= */
 
-/* セクションの背景をLINEトーク画面風に（ボディで既に設定しているためここでは上書きしない） */
-#voices { background: #e9e9eb; padding: 30px 20px; }
+/* 吹き出しセクションの背景を淡いピンクに */
+#voices { background: #fff0f5; padding: 30px 20px; }
 
 /* voice-group の間隔を調整 */
 .voice-group { margin-bottom: 30px; }
@@ -114,7 +114,7 @@ section { padding: 64px 20px; background: var(--bg); }
     font-weight: 400; 
     color: var(--muted);
     padding: 3px 10px;
-    background: #dcdce2; /* 薄いグレーの背景 */
+    background: #f4d4dd; /* 淡いピンクグレーの背景 */
     border-radius: 12px;
 }
 
@@ -122,38 +122,38 @@ section { padding: 64px 20px; background: var(--bg); }
 .balloon-list { 
     display: flex; 
     flex-direction: column; 
-    gap: 10px; /* 吹き出し間の隙間を詰める */
-    margin: 0; /* マージンをリセット */
+    gap: 10px; 
+    margin: 0;
 }
 
 /* 吹き出しの基本スタイル */
 .balloon { 
     display: flex; 
-    margin-bottom: 5px; /* 吹き出しを少し離す */
+    margin-bottom: 5px; 
 }
 
-/* 吹き出しの内容（content）を上書き */
+/* 吹き出しの内容（content） */
 .balloon .content {
     background: #fff; 
     padding: 10px 14px;
-    border-radius: 18px; /* 角を丸く */
-    box-shadow: none; /* 影を消してフラットに */
-    max-width: 80%; /* 幅を制限 */
+    border-radius: 18px; 
+    box-shadow: none; 
+    max-width: 80%; 
     position: relative;
     line-height: 1.5;
-    /* 元のCSSで設定されていた不要なスタイルを上書き */
     margin: 0;
+    /* 吹き出し内の文字を中央揃えにする */
+    text-align: center; 
 }
 .balloon p { margin: 0; }
 
-/* 吹き出しのメタ情報（名前）を吹き出し外に移動 */
+/* 吹き出しのメタ情報（名前） */
 .balloon .meta { 
     font-size: 0.75rem; 
     color: var(--muted); 
     margin-bottom: 0px; 
-    position: absolute; /* 相対的な位置にする */
-    top: -15px; /* 上部に配置 */
-    /* 元のCSSのmetaスタイルをリセット */
+    position: absolute; 
+    top: -15px; 
     margin: 0;
 }
 
@@ -163,10 +163,9 @@ section { padding: 64px 20px; background: var(--bg); }
     justify-content: flex-start;
 }
 .voice-group:nth-child(1) .balloon .content {
-    background: #fff; /* 白い背景 */
-    /* 吹き出しの尻尾に見えるように左下の角を鋭く */
+    background: #ffffff; /* 受信側は白を維持 */
     border-bottom-left-radius: 2px; 
-    margin-left: 5px; /* メタ情報のスペース確保 */
+    margin-left: 5px; 
 }
 .voice-group:nth-child(1) .balloon .meta {
     left: 10px;
@@ -179,11 +178,10 @@ section { padding: 64px 20px; background: var(--bg); }
 }
 .voice-group:nth-child(2) .balloon .content,
 .voice-group:nth-child(3) .balloon .content {
-    background: #b2e680; /* 緑色の背景（LINE送信風） */
-    /* 吹き出しの尻尾に見えるように右下の角を鋭く */
+    background: #ffe5ee; /* 送信側を淡いピンクに */
     border-bottom-right-radius: 2px; 
     color: var(--text);
-    margin-right: 5px; /* メタ情報のスペース確保 */
+    margin-right: 5px; 
 }
 .voice-group:nth-child(2) .balloon .meta,
 .voice-group:nth-child(3) .balloon .meta {
@@ -287,4 +285,3 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 
 /* FAQの非表示・表示切り替え用 */
 .qa-hidden { display: none; }
-
