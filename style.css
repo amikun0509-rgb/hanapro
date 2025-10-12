@@ -88,81 +88,118 @@ section { padding: 64px 20px; }
 .btn-primary:hover { background: var(--brand-dark); }
 .btn-ghost { background: #fff; color: var(--brand-dark); border: 1px solid #ffd3e0; }
 
-/* 💖 みんなの声セクション 統一デザイン */
+/* 💖 みんなの声セクション 統一デザイン - 親要素の調整 */
 #voices {
     background: #fff5f8; /* 淡いピンクで全体統一 */
     padding: 60px 20px;
 }
 
-/* 吹き出し全体 左寄せで統一 */
-.voice-group .balloon {
-    justify-content: flex-start !important;
-    /* しっぽとアイコンのために、位置調整を可能にする */
-    position: relative; 
-    margin-left: 5px; /* アイコンとの距離を調整 */
+/* 構造を整理するためのコンテナ (オプション) */
+.voice-list-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+/* カテゴリ全体 (ラベルと吹き出しのグループ) */
+.voice-group {
+    margin-bottom: 30px;
+}
+
+/* 吹き出しリスト全体 - 縦に並べる */
+.voice-group .balloon-list {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; /* 吹き出し間のスペース */
+    margin-top: 15px;
+}
+
+/* 吹き出しの個々のアイテム全体 - アバターとコンテンツを横並びにする */
+.voice-group .balloon {
+    display: flex; /* ★ 横並びの肝 */
+    align-items: flex-start; /* 上端に揃える */
+    justify-content: flex-start;
+    position: relative; 
+}
+
+/* ★ アバター要素のデザイン */
+.voice-group .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* margin-right: -5px; /* しっぽと重なるように少し寄せる */
+    flex-shrink: 0;
+    margin-top: 10px; /* 吹き出しのしっぽの高さに合わせる */
+    z-index: 20; 
+    /* アイコンの中身を中央寄せ（仮で文字を入れる場合など） */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+/* アバターのカラーバリエーション */
+.voice-group .avatar.pink { background: var(--brand); } /* 学生 */
+.voice-group .avatar.blue { background: #4ec0f7; } /* 利用者 */
+.voice-group .avatar.green { background: var(--accent); } /* 地域関係者 */
+
 
 /* 吹き出しデザイン 白ベースで統一 */
 .voice-group .balloon .content {
     background: #ffffff;
     border-radius: 18px;
-    /* しっぽを出すため、左下の角は丸めすぎない、またはしっぽで隠す */
-    border-bottom-left-radius: 18px; 
-    margin-left: 0; /* 親要素で調整するのでここは0に */
+    padding: 15px;
+    margin-left: 10px; /* アバターからの距離 */
     color: var(--text);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 影を少し強めにし、立体感を出す */
-    padding: 15px; /* パディングを調整 */
-    position: relative; /* しっぽの基準にする */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* 影を調整 */
+    position: relative; 
+    max-width: calc(100% - 60px); /* アバターの分を引く */
 }
 
 /* 吹き出しのしっぽ (左側) */
 .voice-group .balloon .content::before {
     content: '';
     position: absolute;
-    /* 吹き出しの左下に配置 */
-    left: -10px; 
-    bottom: 5px; 
+    /* 吹き出しのコンテンツの左上隅に近づける */
+    left: -15px; /* アバター側に伸ばす */
+    top: 15px; /* アバターの縦位置に合わせる */
     
     /* 三角形を作る設定 */
-    border: 10px solid transparent; 
-    border-right-color: #ffffff; /* 吹き出しと同じ色にする */
-    border-bottom-color: #ffffff;
+    border: 8px solid transparent; 
+    border-right-color: #ffffff; /* 吹き出しと同じ色 */
+    border-bottom-color: transparent; 
     
-    /* 角を少し丸く見せるための調整 (オプション) */
-    border-radius: 4px;
-    
-    /* 吹き出しの影と重ならないように、z-indexを調整 */
     z-index: 10;
 }
-
 
 /* メタ情報位置も左寄せ - 上端に配置 */
 .voice-group .balloon .meta {
     position: absolute;
-    top: -20px; /* 吹き出しの上部に移動 */
+    top: -20px; 
     left: 0px; 
     right: auto;
-    font-size: 0.85rem;
-    color: var(--brand-dark, #ff69b4); /* ブランドカラーをメタ情報の色に使う */
-    font-weight: bold;
-    background: transparent; /* 背景なし */
+    font-size: 0.8rem; /* サイズを少し小さく */
+    color: var(--brand-dark);
+    font-weight: 600;
+    background: transparent; 
+    padding-left: 5px; /* 吹き出しと少しずらす */
 }
 
-/* カテゴリーラベルの色を全体と調和させる */
+/* カテゴリーラベル */
+.voice-category {
+    text-align: left;
+}
 .voice-category .label {
-    background: #ffc0cb; /* より明るいピンク */
-    color: #4a4a4a; /* 文字色を濃いグレーに */
-    border-radius: 20px; /* 丸みを強く */
+    background: #ffc0cb; 
+    color: var(--brand-dark); /* 文字色をブランドカラーに統一 */
+    border-radius: 20px; 
     padding: 5px 15px;
     font-size: 0.9rem;
     font-weight: bold;
+    display: inline-block;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-/* 吹き出し内のテキストの調整 */
-.voice-group .balloon .content p {
-    margin: 0;
-    line-height: 1.6;
 }
 
 /* 活動報告 */
@@ -258,6 +295,7 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 
 /* FAQの非表示・表示切り替え用 */
 .qa-hidden { display: none; }
+
 
 
 
