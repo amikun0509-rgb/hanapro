@@ -96,99 +96,39 @@ section { padding: 64px 20px; background: var(--bg); }
 /* ======================================================= */
 
 /* 💖 みんなの声セクション（背景を他と調和させる） */
+/* 💖 みんなの声セクション 統一デザイン */
 #voices { 
-    background: var(--bg); /* 他のセクションと統一 */
+    background: #fff5f8; /* 淡いピンクで全体統一 */
     padding: 60px 20px;
 }
 
-.voice-group { 
-    margin-bottom: 30px; 
+/* 吹き出し全体 左寄せで統一 */
+.voice-group .balloon {
+    justify-content: flex-start !important;
 }
 
-/* カテゴリーラベルの背景も淡く統一 */
-.voice-category .label { 
-    background: #ffe5ee; /* ほんのりピンクで他と統一 */
-    color: var(--brand-dark);
-}
-.voice-category .icon.pink { display: none; /* アイコンを非表示にする */ }
-.voice-category .label { 
-    font-size: 0.9rem; 
-    font-weight: 400; 
-    color: var(--muted);
-    padding: 3px 10px;
-    background: #f4d4dd; /* 淡いピンクグレーの背景 */
-    border-radius: 12px;
-}
-
-/* 吹き出しリストのレイアウト調整 */
-.balloon-list { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 10px; 
-    margin: 0;
-}
-
-/* 吹き出しの基本スタイル */
-.balloon { 
-    display: flex; 
-    margin-bottom: 5px; 
-}
-
-/* 吹き出しの内容（content） */
-.balloon .content {
-    background: #fff; 
-    padding: 10px 14px;
-    border-radius: 18px; 
-    box-shadow: none; 
-    max-width: 80%; 
-    position: relative;
-    line-height: 1.5;
-    margin: 0;
-    /* 吹き出し内の文字を中央揃えにする */
-    text-align: center; 
-}
-.balloon p { margin: 0; }
-
-/* 吹き出しのメタ情報（名前） */
-.balloon .meta { 
-    font-size: 0.75rem; 
-    color: var(--muted); 
-    margin-bottom: 0px; 
-    position: absolute; 
-    top: -15px; 
-    margin: 0;
-}
-
-
-/* 学生（左側、受信風） */
-.voice-group:nth-child(1) .balloon {
-    justify-content: flex-start;
-}
-.voice-group:nth-child(1) .balloon .content {
-    background: #ffffff; /* 受信側は白を維持 */
-    border-bottom-left-radius: 2px; 
-    margin-left: 5px; 
-}
-.voice-group:nth-child(1) .balloon .meta {
-    left: 10px;
-}
-
-/* 利用者・地域関係者（右側、送信風） */
-.voice-group:nth-child(2) .balloon,
-.voice-group:nth-child(3) .balloon {
-    justify-content: flex-end;
-}
-.voice-group:nth-child(2) .balloon .content,
-.voice-group:nth-child(3) .balloon .content {
-    background: #ffe5ee; /* 送信側を淡いピンクに */
-    border-bottom-right-radius: 2px; 
+/* 吹き出しデザイン 白ベースで統一 */
+.voice-group .balloon .content {
+    background: #ffffff;
+    border-radius: 18px;
+    border-bottom-left-radius: 2px;
+    margin-left: 5px;
     color: var(--text);
-    margin-right: 5px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
-.voice-group:nth-child(2) .balloon .meta,
-.voice-group:nth-child(3) .balloon .meta {
-    left: auto;
-    right: 10px;
+
+/* メタ情報位置も左寄せ */
+.voice-group .balloon .meta {
+    left: 10px;
+    right: auto;
+}
+
+/* カテゴリーラベルの色を全体と調和させる */
+.voice-category .label {
+    background: #ffd9e6;
+    color: var(--brand-dark);
+    border-radius: 12px;
+    padding: 4px 12px;
 }
 
 /* ======================================================= */
@@ -287,4 +227,5 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 
 /* FAQの非表示・表示切り替え用 */
 .qa-hidden { display: none; }
+
 
