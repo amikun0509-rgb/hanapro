@@ -95,18 +95,20 @@ section { padding: 64px 20px; background: var(--bg); }
 /* 💖 LINE風（ピンク系・中央揃え）の吹き出しセクションのスタイル */
 /* ======================================================= */
 
-/* 吹き出しセクションの背景を淡いピンクに */
-#voices { background: #fff0f5; padding: 30px 20px; }
+/* 💖 みんなの声セクション（背景を他と調和させる） */
+#voices { 
+    background: var(--bg); /* 他のセクションと統一 */
+    padding: 60px 20px;
+}
 
-/* voice-group の間隔を調整 */
-.voice-group { margin-bottom: 30px; }
+.voice-group { 
+    margin-bottom: 30px; 
+}
 
-/* カテゴリーラベルのデザインをシンプルに */
-.voice-category { 
-    justify-content: center; 
-    margin: 20px 0 10px; 
-    text-align: center;
-    display: flex; /* 中央寄せのために追加 */
+/* カテゴリーラベルの背景も淡く統一 */
+.voice-category .label { 
+    background: #ffe5ee; /* ほんのりピンクで他と統一 */
+    color: var(--brand-dark);
 }
 .voice-category .icon.pink { display: none; /* アイコンを非表示にする */ }
 .voice-category .label { 
@@ -285,3 +287,4 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 
 /* FAQの非表示・表示切り替え用 */
 .qa-hidden { display: none; }
+
