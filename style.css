@@ -88,39 +88,69 @@ section { padding: 64px 20px; }
 .btn-primary:hover { background: var(--brand-dark); }
 .btn-ghost { background: #fff; color: var(--brand-dark); border: 1px solid #ffd3e0; }
 
-/* 💖 みんなの声セクション 統一デザイン */
-#voices { 
-    background: #fff5f8; /* 淡いピンクで全体統一 */
-    padding: 60px 20px;
+/* 💬 みんなの声セクション */
+#voices {
+  background: linear-gradient(180deg, #fff 0%, #fff5f8 100%);
+  padding: 60px 20px;
 }
 
-/* 吹き出し全体 左寄せで統一 */
-.voice-group .balloon {
-    justify-content: flex-start !important;
+.voice-group {
+  margin-bottom: 40px;
 }
 
-/* 吹き出しデザイン 白ベースで統一 */
-.voice-group .balloon .content {
-    background: #ffffff;
-    border-radius: 18px;
-    border-bottom-left-radius: 2px;
-    margin-left: 5px;
-    color: var(--text);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+.voice-category {
+  margin-bottom: 30px;
 }
 
-/* メタ情報位置も左寄せ */
-.voice-group .balloon .meta {
-    left: 10px;
-    right: auto;
+.voice-category h3 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  border-left: 5px solid #ffb6c1;
+  padding-left: 10px;
+  color: var(--brand-dark);
 }
 
-/* カテゴリーラベルの色を全体と調和させる */
-.voice-category .label {
-    background: #ffd9e6;
-    color: var(--brand-dark);
-    border-radius: 12px;
-    padding: 4px 12px;
+/* 統一した吹き出しスタイル（左側） */
+.voice {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.voice-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid #ffb6c1;
+}
+
+.voice-content {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  max-width: 80%;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border: 1px solid #ffd5e1;
+}
+
+/* 吹き出しの左矢印 */
+.voice-content::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+}
+
+.voice-name {
+  font-weight: bold;
+  color: #d94c6f;
+  margin-bottom: 5px;
 }
 
 
@@ -217,4 +247,5 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 
 /* FAQの非表示・表示切り替え用 */
 .qa-hidden { display: none; }
+
 
