@@ -1,197 +1,242 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>花プロジェクト | ボランティア公式サイト</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>花プロジェクト | ボランティア公式サイト</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand">
-        <div class="logo"></div>
-        <div>花プロジェクト</div>
-      </div>
+    <header>
+        <div class="nav">
+            <div class="brand">
+                <div class="logo">
+                    <img src="https://github.com/amikun0509-rgb/hanapro/blob/main/%E6%A8%AA%E7%B5%84%E3%81%BF%E3%83%AD%E3%82%B4-%E3%82%AB%E3%83%A9%E3%83%BC-03.png?raw=true" alt="花プロジェクトロゴ">
+                </div>
+            </div>
 
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <div></div><div></div><div></div>
-      </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div><div></div><div></div>
+                <span class="menu-text">メニュー</span>
+            </div>
 
-      <nav>
-        <ul id="menu">
-          <li><a href="#about">花プロジェクトとは</a></li>
-          <li><a href="#intro-video">紹介動画</a></li>
-          <li><a href="#voices-students">学生の声</a></li>
-          <li><a href="#voices-users">利用者の声</a></li>
-          <li><a href="#flowers">お花の紹介</a></li>
-          <li><a href="#qa">よくある質問</a></li>
-          <li><a href="#news">最新情報</a></li>
-          <li><a href="#booking" class="btn btn-primary">予約</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- 活動内容 -->
-  <section id="about">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>花プロジェクトとは</h2>
-        <p>花を通して笑顔を届ける学生ボランティア活動です。</p>
-      </div>
-      <div>
-        <img id="slideshow" src="https://github.com/amikun0509-rgb/hanapro/blob/main/large_d12ffb5e-9b9e-4276-be0d-a6f54f90a702.jpg?raw=true" alt="花と笑顔">
-      </div>
-      <p>『花プロジェクト』は、学生が高齢者施設や地域イベントなどを訪問し、季節の花を届けるボランティア活動です。花を通じた交流によって、笑顔を広げ、地域とのつながりを深めています。</p>
-    </div>
-  </section>
-
-  <!-- 紹介動画 -->
-  <section id="intro-video">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>紹介動画</h2>
-        <p>花プロジェクトの様子を動画でご覧ください。</p>
-      </div>
-
-      <div class="video-container">
-        <iframe
-          src="https://www.youtube.com/embed/ExW8E7VZXoQ"
-          title="ボランティア参加者に向けて" allowfullscreen>
-        </iframe>
-        <iframe
-          src="https://www.youtube.com/embed/Q5RHDKJSN3Q"
-          title="利用者に向けて" allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- 学生の声 -->
-  <section id="voices-students">
-    <div class="wrap">
-      <div class="section-head"><h2>学生の声</h2></div>
-      <div class="balloon-list">
-        <div class="balloon">
-          <div class="icon"></div>
-          <div class="content">
-            <div class="meta">大学3年・Aさん</div>
-            <p>花の色をきっかけに会話が広がり、緊張がほぐれました。</p>
-          </div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#" onclick="openModal('greeting-modal'); return false;">あいさつ</a></li>
+                    <li><a href="#intro-video">紹介動画</a></li>
+                    <li><a href="#voices">みんなの声</a></li>
+                    <li><a href="#flowers">お花の紹介</a></li>
+                    <li><a href="#qa">よくある質問</a></li>
+                    <li><a href="#news">最新情報</a></li>
+                    <li><a href="#booking" class="btn btn-primary">予約</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="balloon">
-          <div class="icon"></div>
-          <div class="content">
-            <div class="meta">大学2年・Bさん</div>
-            <p>高齢者の昔話を聞いて、世代を超えた学びを実感しました。</p>
-          </div>
+    </header>
+
+    <section id="about">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>花プロジェクトとは</h2>
+                <p>花を通して笑顔を届ける学生ボランティア活動です。</p>
+            </div>
+            <div>
+                <img id="slideshow" src="https://github.com/amikun0509-rgb/hanapro/blob/main/large_d12ffb5e-9b9e-4276-be0d-a6f54f90a702.jpg?raw=true" alt="花と笑顔">
+            </div>
+            <p>『花プロジェクト』は、学生が高齢者施設や地域イベントなどを訪問し、季節の花を届けるボランティア活動です。花を通じた交流によって、笑顔を広げ、地域とのつながりを深めています。</p>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="#" onclick="openModal('greeting-modal'); return false;" class="btn btn-ghost">あいさつ</a>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 利用者の声 -->
-  <section id="voices-users">
-    <div class="wrap">
-      <div class="section-head"><h2>利用者の声</h2></div>
-      <div class="balloon-list">
-        <div class="balloon">
-          <div class="icon"></div>
-          <div class="content">
-            <div class="meta">80代・女性</div>
-            <p>部屋が明るくなり、学生さんとの会話が毎日の楽しみです。</p>
-          </div>
+    </section>
+    
+    <div id="greeting-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('greeting-modal')">&times;</span>
+            <h2>あいさつと活動理念</h2>
+            <div class="modal-content-scroll">
+                <p>お花し支援プロジェクトは、「制度では補いきれない地域住民の困りごとを解決したい」という思いから、2024年に長野大学の夢チャレンジ制度を活用して設立されました。</p>
+                <p>上田市を中心に、地域の方々のお宅を訪問し、ちょっとした困りごとや余暇活動のサポートを行っています。高齢者だけでなく、子育て世帯にもご利用いただける取り組みです。</p>
+                <p>花苗や押し花の栞などを持参し、お手伝いだけでなく、「お花」を通じた「お話」によって、希望や生きがいを分かち合える交流を大切にしています。</p>
+                <p>また、自治会役員や民生児童委員、地域包括支援センター、行政・福祉関係者の皆様にご協力いただいているため、安心してご利用いただけます。 お話の中でニーズを見つけ、必要に応じて専門職へおつなぎする体制も整えています。 「困っているけれど、どこに相談したらいいかわからない…」そんな方も、まずはボランティアに気軽にお話しください。</p>
+                <p>さらに、困りごとがなくても、「学生と話してみたい」「誰かと交流したい」といった思いを持つ方も大歓迎です。 お花し支援プロジェクトは、地域の中で人と人がつながるきっかけづくりを目指しています。</p>
+                <p>自宅への訪問支援だけでなく、マンツーマンのスマホ教室や地域コミュニティ、自治会・子供会のイベントでのボランティア活動なども行っています。 ご希望に応じて柔軟に対応いたしますので、どうぞお気軽にご相談ください。</p>
+                <p>2025年10月現在、50名の学生がボランティアとして登録しており、学生に限らず地域の方も参加できる体制を整え、「誰もが誰かの役に立つ」可能性を広げています。</p>
+            </div>
         </div>
-        <div class="balloon">
-          <div class="icon"></div>
-          <div class="content">
-            <div class="meta">施設職員</div>
-            <p>安全面の配慮も丁寧で、レクリエーションとしても最適でした。</p>
-          </div>
+    </div>
+    
+    <section id="flow">
+        <div class="wrap">
+            <div class="section-head"><h2>花プロの流れ</h2></div>
+            <div class="flow-images">
+                <img src="https://github.com/amikun0509-rgb/hanapro/blob/main/S__21372970.jpg?raw=true" alt="花プロの流れ①">
+                <img src="https://github.com/amikun0509-rgb/hanapro/blob/main/S__21372971.jpg?raw=true" alt="花プロの流れ②">
+                <img src="https://github.com/amikun0509-rgb/hanapro/blob/main/S__21372972.jpg?raw=true" alt="花プロの流れ③">
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- お花の紹介 -->
-  <section id="flowers">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>お花の紹介</h2>
-        <p>今回は「ビオラ」をお届けします。</p>
-      </div>
-      <div class="card" style="text-align:center;">
-        <img src="https://github.com/amikun0509-rgb/hanapro/blob/main/large_d12ffb5e-9b9e-4276-be0d-a6f54f90a702.jpg?raw=true" alt="ビオラ">
-        <h3>ビオラ</h3>
-        <p class="meta">花言葉：誠実・信頼</p>
-        <p>小さく可憐な花で、色とりどりの表情が魅力です。春や秋に元気を届けます。</p>
-      </div>
-    </div>
-  </section>
+    <section id="intro-video">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>紹介動画</h2>
+                <p>花プロジェクトの様子を動画でご覧ください。</p>
+            </div>
 
-  <!-- よくある質問 -->
-  <section id="qa">
-    <div class="wrap">
-      <div class="section-head"><h2>よくある質問</h2></div>
-      <div class="grid" style="gap:16px;">
-        <details><summary>予約はどのくらい前に必要ですか？</summary><p>基本的には1週間前までにお願いします。急ぎの場合はご相談ください。</p></details>
-        <details><summary>費用はかかりますか？</summary><p>お花代・交通費など実費をご負担いただきます。詳細は予約時にご案内します。</p></details>
-        <details><summary>写真撮影は可能ですか？</summary><p>同意をいただいた場合のみ撮影し、活動報告に使用します。</p></details>
-      </div>
-    </div>
-  </section>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ExW8E7VZXoQ" title="ボランティア参加者に向けて" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/Q5RHDKJSN3Q" title="利用者に向けて" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 
-  <!-- 最新情報 -->
-  <section id="news">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>最新情報</h2>
-        <p>最新情報はこちらから</p>
-      </div>
-      <div class="card" style="text-align:center;">
-        <a href="https://line.me/R/ti/p/@884nkjuh?oat_content=url&ts=09192150" target="_blank" class="btn btn-primary">LINE</a>
-        <a href="https://www.instagram.com/hana_pro2024" target="_blank" class="btn btn-ghost">Instagram</a>
-      </div>
-    </div>
-  </section>
+    <section id="voices">
+        <div class="wrap">
+            <div class="section-head"><h2>みんなの声</h2></div>
 
-  <!-- note紹介 -->
-  <section id="report" class="report-section">
-    <h2>🌼 活動報告</h2>
-    <p>私たちの活動の様子をnoteで発信しています。</p>
-    <a href="https://note.com/hanapuro_2024" target="_blank" class="note-button">
-      活動報告を見る
-    </a>
-  </section>
+            <div class="voice-group">
+                <div class="voice-category">
+                    <div class="icon pink"></div>
+                    <div class="label">学生</div>
+                </div>
+                <div class="balloon-list">
+                    <div class="balloon">
+                        <div class="content">
+                            <div class="meta">大学3年・Aさん</div>
+                            <p>花の色をきっかけに会話が広がり、緊張がほぐれました。</p>
+                        </div>
+                    </div>
+                    <div class="balloon">
+                        <div class="content">
+                            <div class="meta">大学2年・Bさん</div>
+                            <p>高齢者の昔話を聞いて、世代を超えた学びを実感しました。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- 予約・お問い合わせ -->
-  <section id="booking">
-    <h2>利用者様用 登録フォーム</h2>
-    <div class="form-wrapper">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe3I1TQSDWLDuTut8_An3TRXOYB7DmEDhu0vZA2y0g4LnlmYA/viewform?embedded=true"
-        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
-        読み込んでいます...
-      </iframe>
-    </div>
-  </section>
+            <div class="voice-group">
+                <div class="voice-category">
+                    <div class="icon pink"></div>
+                    <div class="label">利用者</div>
+                </div>
+                <div class="balloon-list">
+                    <div class="balloon">
+                        <div class="content">
+                            <div class="meta">80代・女性</div>
+                            <p>部屋が明るくなり、学生さんとの会話が毎日の楽しみです。</p>
+                        </div>
+                    </div>
+                    <div class="balloon">
+                        <div class="content">
+                            <div class="meta">施設職員</div>
+                            <p>安全面の配慮も丁寧で、レクリエーションとしても最適でした。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <strong>花プロジェクト</strong><br>
-        メール: <a href="mailto:contact@example.com">contact@example.com</a>
-      </div>
-    </div>
-  </footer>
+    <section id="price">
+        <div class="wrap">
+            <div class="section-head"><h2>利用料金</h2></div>
+            <img src="https://github.com/amikun0509-rgb/hanapro/blob/main/S__21372982.jpg?raw=true" alt="料金表" class="price-img">
+            
+            <div class="card" style="margin-top: 30px; padding: 25px;">
+                <h3>🪷 料金案（訪問支援）</h3>
+                <p style="font-size: 0.9em; color: var(--muted);">内容 / 人数 / 時間 / 料金（税込） / 備考</p>
+                <ul>
+                    <li>**基本訪問支援**: 学生2〜3人 / 約1時間 / 500円 / お話・お手伝い・交流を含む</li>
+                    <li>**スマホ教室（マンツーマン）**: 学生1人 / 約60分 / 200円 / 初回無料キャンペーンあり</li>
+                    <li>**イベント参加（自治会・子供会等）**: 応相談 / 応相談 / 無料〜 / 地域貢献活動として柔軟対応</li>
+                </ul>
+                <p style="font-size: 0.9em; color: var(--brand-dark); font-weight: 600;">※経済的に厳しい方には減免制度あり。初回利用は無料で体験できます。</p>
+                <hr style="margin: 20px 0; border: 0; border-top: 1px dashed #f0e7ea;">
+                
+                <h3>🌼 ご利用料金についてのお知らせ</h3>
+                <p>お花し支援プロジェクトでは、これまで無料で訪問支援を行ってまいりましたが、活動の継続と質の向上を目指し、2025年11月より一部サービスを有料とさせていただくことになりました。</p>
+                <p>訪問支援は、学生2〜3人がご自宅に伺い、お話やちょっとしたお手伝い、交流を通じて心温まる時間を提供するものです。</p>
+                <p>料金は1回500円（約1時間）とし、学生の交通費や活動備品の補助に充てさせていただきます。</p>
+                <p>また、スマホ教室や地域イベントでのボランティア活動などは、内容に応じて柔軟に対応いたします。</p>
+                <p>初回利用は無料で体験いただけますので、まずはお気軽にご相談ください。</p>
+                <p>経済的な事情がある方には減免制度もございます。</p>
+                <p>「誰もが誰かの役に立つ」この輪を、無理なく、やさしく広げていけたらと思っています。</p>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <section id="qa">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>よくある質問（FAQ）</h2>
+                <p>ご利用に関する疑問はこちらで解決</p>
+            </div>
+            
+            <div class="grid" id="qa-list">
+                <details><summary>Q. 上田市外でも支援してもらえますか？</summary><p>A. 基本的には上田市内で活動しておりますが、別途交通費を頂くことで対応可能な場合もございます。まずはご相談ください。</p></details>
+                <details><summary>Q. 何時間まで利用できますか？</summary><p>A. 基本的には1時間を目安にご利用ください。1時間以上をご希望の場合は、事前にご相談ください。当日の延長には対応できかねます。</p></details>
+                <details><summary>Q. どれくらいの頻度で利用できますか？</summary><p>A. 最大で週1回のご利用を推奨していますが、特に制限は設けておりません。ご希望の頻度についてご相談ください。</p></details>
+                
+                <div id="qa-details-hidden" class="qa-hidden">
+                    <details><summary>Q. 依頼してすぐ来てもらえますか？</summary><p>A. 依頼後1〜5日以内に日時決定のご連絡を差し上げます。訪問は通常、依頼から1〜2週間後となります。</p></details>
+                    <details><summary>Q. 延長は可能ですか？</summary><p>A. 延長をご希望の場合は、事前にご相談ください。当日の延長には対応できません。</p></details>
+                    <details><summary>Q. どのような依頼が多いですか？</summary><p>A. 内容は利用者によって様々です。これまでの例としては、お話、庭の手入れ、スマホの操作説明などがあります。</p></details>
+                    <details><summary>Q. 心配ごとの相談もできますか？</summary><p>A. はい、可能です。必要に応じて行政や福祉機関へのつなぎも行っています。</p></details>
+                    <details><summary>Q. 利用料はいくらですか？</summary><p>A. 初回利用は無料です。2回目以降は1回の訪問につき500円を頂戴しております。詳細は「ご利用料金について」のページをご覧ください。</p></details>
+                    <details><summary>Q. 個人情報の取り扱いはどうなっていますか？</summary><p>A. ご提供いただいた情報は、必要最低限のみボランティアに共有し、運営組織の管理部が責任を持って管理いたします。</p></details>
+                    <details><summary>Q. 長野大学の学生以外も参加できますか？</summary><p>A. はい、大学生に限らず地域の方もご参加いただけます。利用者としての参加と、ボランティアとしての活動を両立することも歓迎します。</p></details>
+                    <details><summary>Q. ボランティアは決まった曜日に活動しますか？</summary><p>A. 基本的には曜日固定ではありませんが、利用者の希望に応じて定期的な支援をお願いする場合もあります。</p></details>
+                    <details><summary>Q. ボランティア経験がなくても大丈夫ですか？</summary><p>A. はい、2〜3人で訪問するため、基本的には経験のあるメンバーと一緒に活動します。初対面が不安な方は、知り合い同士での参加も可能です。</p></details>
+                    <details><summary>Q. 道具が必要な依頼の場合はどうすればよいですか？</summary><p>A. 基本的には利用者の方にご用意いただいております。事前に内容をご相談ください。</p></details>
+                </div>
+            </div>
+            <button class="btn btn-ghost" id="show-all-qa">すべての質問を見る</button>
+        </div>
+    </section>
+
+    <section id="news">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>最新情報</h2>
+                <p>最新情報はこちらから</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <a href="https://line.me/R/ti/p/@884nkjuh?oat_content=url&ts=09192150" target="_blank" class="btn btn-primary">LINE</a>
+                <a href="https://www.instagram.com/hana_pro2024" target="_blank" class="btn btn-ghost">Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="report" class="report-section">
+        <h2>🌼 活動報告</h2>
+        <p class="note-text">私たちの活動の様子をnoteで発信しています。</p>
+        <a href="https://note.com/hanapuro_2024" target="_blank" class="note-button">
+            活動報告を見る
+        </a>
+    </section>
+
+    <section id="booking">
+        <h2>登録フォーム</h2>
+        <div class="form-buttons">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3I1TQSDWLDuTut8_An3TRXOYB7DmEDhu0vZA2y0g4LnlmYA/viewform?embedded=true" target="_blank" class="btn btn-primary">利用者の方</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3xWcP2XhK1yF8o4b1F3PQZ8gXYf1zPp3XlfZT9z/viewform?embedded=true" target="_blank" class="btn btn-ghost">参加者の方</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <strong>花プロジェクト</strong><br>
+                メール: <a href="mailto:contact@example.com">contact@example.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
- 
-
-
-
-
