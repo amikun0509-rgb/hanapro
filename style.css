@@ -89,7 +89,7 @@ section { padding: 64px 20px; }
 .btn-ghost { background: #fff; color: var(--brand-dark); border: 1px solid #ffd3e0; }
 
 /* 💖 みんなの声セクション 統一デザイン */
-#voices { 
+#voices {
     background: #fff5f8; /* 淡いピンクで全体統一 */
     padding: 60px 20px;
 }
@@ -97,32 +97,73 @@ section { padding: 64px 20px; }
 /* 吹き出し全体 左寄せで統一 */
 .voice-group .balloon {
     justify-content: flex-start !important;
+    /* しっぽとアイコンのために、位置調整を可能にする */
+    position: relative; 
+    margin-left: 5px; /* アイコンとの距離を調整 */
 }
 
 /* 吹き出しデザイン 白ベースで統一 */
 .voice-group .balloon .content {
     background: #ffffff;
     border-radius: 18px;
-    border-bottom-left-radius: 2px;
-    margin-left: 5px;
+    /* しっぽを出すため、左下の角は丸めすぎない、またはしっぽで隠す */
+    border-bottom-left-radius: 18px; 
+    margin-left: 0; /* 親要素で調整するのでここは0に */
     color: var(--text);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 影を少し強めにし、立体感を出す */
+    padding: 15px; /* パディングを調整 */
+    position: relative; /* しっぽの基準にする */
 }
 
-/* メタ情報位置も左寄せ */
+/* 吹き出しのしっぽ (左側) */
+.voice-group .balloon .content::before {
+    content: '';
+    position: absolute;
+    /* 吹き出しの左下に配置 */
+    left: -10px; 
+    bottom: 5px; 
+    
+    /* 三角形を作る設定 */
+    border: 10px solid transparent; 
+    border-right-color: #ffffff; /* 吹き出しと同じ色にする */
+    border-bottom-color: #ffffff;
+    
+    /* 角を少し丸く見せるための調整 (オプション) */
+    border-radius: 4px;
+    
+    /* 吹き出しの影と重ならないように、z-indexを調整 */
+    z-index: 10;
+}
+
+
+/* メタ情報位置も左寄せ - 上端に配置 */
 .voice-group .balloon .meta {
-    left: 10px;
+    position: absolute;
+    top: -20px; /* 吹き出しの上部に移動 */
+    left: 0px; 
     right: auto;
+    font-size: 0.85rem;
+    color: var(--brand-dark, #ff69b4); /* ブランドカラーをメタ情報の色に使う */
+    font-weight: bold;
+    background: transparent; /* 背景なし */
 }
 
 /* カテゴリーラベルの色を全体と調和させる */
 .voice-category .label {
-    background: #ffd9e6;
-    color: var(--brand-dark);
-    border-radius: 12px;
-    padding: 4px 12px;
+    background: #ffc0cb; /* より明るいピンク */
+    color: #4a4a4a; /* 文字色を濃いグレーに */
+    border-radius: 20px; /* 丸みを強く */
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+/* 吹き出し内のテキストの調整 */
+.voice-group .balloon .content p {
+    margin: 0;
+    line-height: 1.6;
+}
 
 /* 活動報告 */
 .report-section { text-align: center; margin: 60px 0; }
@@ -217,6 +258,7 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 
 /* FAQの非表示・表示切り替え用 */
 .qa-hidden { display: none; }
+
 
 
 
