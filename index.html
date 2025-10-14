@@ -279,9 +279,35 @@
         </div>
     </footer>
 
+    <script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const overlay = document.getElementById("menu-overlay");
+    const isOpen = menu.classList.toggle("open");
+    overlay.style.display = isOpen ? "block" : "none";
+  }
+
+  // メニュー内のリンクをクリックしたら自動で閉じる
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("#menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        const menu = document.getElementById("menu");
+        const overlay = document.getElementById("menu-overlay");
+        menu.classList.remove("open");
+        overlay.style.display = "none";
+      });
+    });
+  });
+</script>
+
+<!-- 背景のオーバーレイ -->
+<div id="menu-overlay" onclick="toggleMenu()"></div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
