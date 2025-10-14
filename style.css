@@ -323,6 +323,33 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
   background-color: #d66a7e;
 }
 
+/* =====================
+   💻 PC表示用の修正
+===================== */
+@media (min-width: 769px) {
+  /* PCではハンバーガーメニューを非表示 */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* PCでは右側（ナビ内）の予約ボタンを非表示 */
+  nav ul li a.btn.btn-primary {
+    display: none;
+  }
+
+  /* PC用ナビ配置調整 */
+  nav ul {
+    display: flex !important;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .reserve-btn {
+    margin-left: auto;
+  }
+}
+
+
 
 
 
