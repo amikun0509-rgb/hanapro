@@ -398,6 +398,12 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
   border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+  #intro-video .video-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
