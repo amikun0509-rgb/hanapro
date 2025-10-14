@@ -296,7 +296,18 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 /* FAQの非表示・表示切り替え用 */
 .qa-hidden { display: none; }
 
-/* ハンバーガーメニュー横の予約ボタン */
+/* 予約ボタンとハンバーガーの配置調整 */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-toggle {
+  margin-left: 10px;
+}
+
+/* 予約ボタン */
 .reserve-btn {
   margin-left: 10px;
   background-color: #e77b90;
@@ -311,6 +322,7 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
 .reserve-btn:hover {
   background-color: #d66a7e;
 }
+
 
 
 
