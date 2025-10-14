@@ -9,34 +9,38 @@
 </head>
 
 <body>
-    <header>
-        <div class="nav">
-            <div class="brand">
-                <div class="logo">
-                    <img src="https://github.com/amikun0509-rgb/hanapro/blob/main/%E6%A8%AA%E7%B5%84%E3%81%BF%E3%83%AD%E3%82%B4-%E3%82%AB%E3%83%A9%E3%83%BC-03.png?raw=true" alt="花プロジェクトロゴ">
-                </div>
+<header>
+    <div class="nav">
+        <div class="brand">
+            <div class="logo">
+                <img src="https://github.com/amikun0509-rgb/hanapro/blob/main/%E6%A8%AA%E7%B5%84%E3%81%BF%E3%83%AD%E3%82%B4-%E3%82%AB%E3%83%A9%E3%83%BC-03.png?raw=true" alt="花プロジェクトロゴ">
             </div>
-
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <div></div><div></div><div></div>
-                <span class="menu-text">メニュー</span>
-            </div>
-
-            <a href="#booking" class="btn btn-primary reserve-btn">予約</a>
-
-            <nav>
-                <ul id="menu">
-                    <li><a href="#" onclick="openModal('greeting-modal'); return false;">あいさつ</a></li>
-                    <li><a href="#intro-video">紹介動画</a></li>
-                    <li><a href="#voices">みんなの声</a></li>
-                    <li><a href="#flowers">お花の紹介</a></li>
-                    <li><a href="#qa">よくある質問</a></li>
-                    <li><a href="#news">最新情報</a></li>
-                    <li><a href="#booking" class="btn btn-primary">予約</a></li>
-                </ul>
-            </nav>
         </div>
-    </header>
+
+        <!-- ★ 予約ボタンを先に配置 -->
+        <a href="#booking" class="btn btn-primary reserve-btn">予約</a>
+
+        <!-- ハンバーガーメニュー（右側） -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div><div></div><div></div>
+            <span class="menu-text">メニュー</span>
+        </div>
+
+        <!-- ナビゲーション -->
+        <nav>
+            <ul id="menu">
+                <li><a href="#" onclick="openModal('greeting-modal'); return false;">あいさつ</a></li>
+                <li><a href="#intro-video">紹介動画</a></li>
+                <li><a href="#voices">みんなの声</a></li>
+                <li><a href="#flowers">お花の紹介</a></li>
+                <li><a href="#qa">よくある質問</a></li>
+                <li><a href="#news">最新情報</a></li>
+                <li><a href="#booking" class="btn btn-primary">予約</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 
     <section id="about">
         <div class="wrap">
@@ -278,6 +282,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
