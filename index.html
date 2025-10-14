@@ -280,31 +280,55 @@
 </footer>
 
 <!-- 背景のオーバーレイ -->
-<div id="menu-overlay" onclick="toggleMenu()"></div>
+<div id="menu-overlay" onclick="closeMenu()"></div>
 
 <script>
+  const menu = document.getElementById("menu");
+  const overlay = document.getElementById("menu-overlay");
+
+  // メニュー開閉
   function toggleMenu() {
-    const menu = document.getElementById("menu");
-    const overlay = document.getElementById("menu-overlay");
     const isOpen = menu.classList.toggle("open");
     overlay.style.display = isOpen ? "block" : "none";
+    document.body.style.overflow = isOpen ? "hidden" : ""; // 背景スクロール防止
   }
 
+  // メニューを閉じる
+  function closeMenu() {
+    menu.classList.remove("open");
+    overlay.style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  // ページ読み込み後の処理
   document.addEventListener("DOMContentLoaded", () => {
+    // メニュー内のリンクを押したとき
     document.querySelectorAll("#menu a").forEach(link => {
-      link.addEventListener("click", () => {
-        const menu = document.getElementById("menu");
-        const overlay = document.getElementById("menu-overlay");
-        menu.classList.remove("open");
-        overlay.style.display = "none";
+      link.addEventListener("click", event => {
+        // 通常のhrefでページ内ジャンプ
+        const href = link.getAttribute("href");
+        if (href && href.startsWith("#") && href.length > 1) {
+          event.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80, // ヘッダー分の余白調整
+              behavior: "smooth"
+            });
+          }
+        }
+        // モーダルを開くリンクはopenModal()に任せる
+        closeMenu(); // 自動で閉じる
       });
     });
   });
 </script>
 
+
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
