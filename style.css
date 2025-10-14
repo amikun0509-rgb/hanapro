@@ -349,6 +349,21 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
   }
 }
 
+/* メニューが開いている時に表示される背景オーバーレイ */
+#menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 50; /* メニューより少し下 */
+}
+
+/* メニューが開いているときにオーバーレイが出るように調整 */
+nav ul.open {
+  z-index: 100;
+}
+
 
 
 
