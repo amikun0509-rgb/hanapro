@@ -398,6 +398,13 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
   font-weight: bold;
 }
 
+/* 🌸 スマホ表示では動画を縦並びに */
+@media (max-width: 768px) {
+  #intro-video .video-container {
+    grid-template-columns: 1fr; /* 1列表示に切り替え */
+  }
+}
+
 
 
 
