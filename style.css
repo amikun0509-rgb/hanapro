@@ -393,6 +393,11 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
   border-radius: 8px;
 }
 
+.highlight {
+  color: #d47b9d; /* ピンク系のアクセントカラー */
+  font-weight: bold;
+}
+
 
 
 
