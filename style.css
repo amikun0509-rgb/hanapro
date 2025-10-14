@@ -367,6 +367,11 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
   transition: all 0.3s ease;
 }
 
+.highlight {
+  color: #d47b9d; /* ピンク系のアクセントカラー */
+  font-weight: bold;
+}
+
 #intro-video .video-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -392,19 +397,6 @@ footer { background: #fff; border-top: 1px solid #f0e7ea; padding: 28px 20px; ma
   border: none;
   border-radius: 8px;
 }
-
-.highlight {
-  color: #d47b9d; /* ピンク系のアクセントカラー */
-  font-weight: bold;
-}
-
-/* 🌸 スマホ表示では動画を縦並びに */
-@media (max-width: 768px) {
-  #intro-video .video-container {
-    grid-template-columns: 1fr; /* 1列表示に切り替え */
-  }
-}
-
 
 
 
