@@ -269,17 +269,20 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-inner">
-            <div>
-                <strong>花プロジェクト</strong><br>
-                メール: <a href="mailto:contact@example.com">hana.hanapuro87@gmail.com</a>
-            　　電話: <a href="tel:080-2654-2328">090-1234-5678</a><br>
-            </div>
-        </div>
-    </footer>
+  <footer>
+  <div class="footer-inner">
+    <div>
+      <strong>花プロジェクト</strong><br>
+      メール: <a href="mailto:hana.hanapuro87@gmail.com">hana.hanapuro87@gmail.com</a><br>
+      電話: <a href="tel:080-2654-2328">090-1234-5678</a><br>
+    </div>
+  </div>
+</footer>
 
-    <script>
+<!-- 背景のオーバーレイ -->
+<div id="menu-overlay" onclick="toggleMenu()"></div>
+
+<script>
   function toggleMenu() {
     const menu = document.getElementById("menu");
     const overlay = document.getElementById("menu-overlay");
@@ -287,7 +290,6 @@
     overlay.style.display = isOpen ? "block" : "none";
   }
 
-  // メニュー内のリンクをクリックしたら自動で閉じる
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("#menu a").forEach(link => {
       link.addEventListener("click", () => {
@@ -300,13 +302,11 @@
   });
 </script>
 
-<!-- 背景のオーバーレイ -->
-<div id="menu-overlay" onclick="toggleMenu()"></div>
-
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
